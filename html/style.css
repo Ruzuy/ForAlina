@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('vector-seamless-background-with-hand-drawn-black-hearts-seamless-pattern-with-hearts_363400-478.avif') repeat;
+    overflow-wrap: break-word;
+    font-family: 'Great Vibes', cursive;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto; /* Центрируем контейнер и добавляем отступ сверху */
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin: 0 0 20px;
+    color: #E0FFFF;
+}
+
+p {
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+    color: #FFC0CB;
+}
+
+.photos {
+    display: flex;
+    flex-direction: column; /* Располагаем изображения вертикально */
+    align-items: center;
+    gap: 20px;
+}
+
+.photos img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 100%; /* Изображения занимают всю ширину контейнера */
+    max-width: 500px; /* Максимальная ширина изображений */
+    height: auto;
+}
