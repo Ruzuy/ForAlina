@@ -20,5 +20,40 @@
             <p>А тут ты мне просто очень нравишся, можно тут написать какая ты красивая и очаровательная, как сильно я тобой каждый день восхищаюсь, но я думаю ты это и сама знаешь)</p>
         </div>
     </div>
+<div id="popup-overlay">
+    <div id="popup">
+        <p>Как думаешь я люблю тебя?</p>
+        <button class="btn btn-yes">Да</button>
+        <button class="btn btn-no">Нет</button>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const popupOverlay = document.getElementById('popup-overlay');
+        const popup = document.getElementById('popup');
+        const btnYes = document.querySelector('.btn-yes');
+        const btnNo = document.querySelector('.btn-no');
+
+        // Показать всплывающее окно через 2 секунды после загрузки страницы
+        setTimeout(() => {
+            popupOverlay.style.display = 'flex';
+        }, 2000);
+
+        // Обработчик для кнопки "Да"
+        btnYes.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+
+        // Обработчик для наведения на кнопку "Нет"
+        btnNo.addEventListener('mouseover', () => {
+            const maxX = window.innerWidth - popup.offsetWidth;
+            const maxY = window.innerHeight - popup.offsetHeight;
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+            popup.style.left = `${randomX}px`;
+            popup.style.top = `${randomY}px`;
+        });
+    });
+</script>
 </body>
 </html>
